@@ -1,0 +1,286 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" />
+    <!-- font-family css -->
+    <link rel="stylesheet" href="/site/css/font-family.css">
+    <!-- css -->
+    <link rel="stylesheet" href="/site/css/libro.css">
+    <title>Libro</title>
+    @RenderSection("addCss", required: false)
+</head>
+
+<body>
+
+    <div class="home-page-container">
+        <div class="container">
+            <div class="navbar-container">
+                <header class="navbar-wrapper d-flex justify-content-between align-items-center p-4 px-0">
+                    <div class="navbar-logo">
+                        <div class="logo-wrapper">
+                            <a href="./index.html"
+                               class="logo-font-style d-flex align-items-center text-decoration-none text-dark">
+                                <img src="/site/images/libro.jpg" class="logo" alt="Libro">LIBRO
+                            </a>
+                        </div>
+                    </div>
+                    <form action="" class="search-form">
+                        <input type="search" name="" placeholder="axtarış.." id="search-box">
+                        <label for="search-box" class="fas fa-search"></label>
+                    </form>
+                    <div class="navbar-icons fs-1 d-flex justify-content-center align-items-center">
+                        <div id="search-btn" class="fas fa-search"></div>
+                        <a href="#" class="fas fa-heart text-decoration-none" title="Bəyənilənlər"></a>
+                        <div id="login-btn" class="fas fa-user" title="Hesabım"></div>
+                        <div id="menu-btn" class="fa-solid fa-bars"></div>
+                    </div>
+                    <div class="login-form-container">
+                        <div id="close-login-btn" class="fas fa-times"></div>
+                        <form action="#">
+                            <h3>daxil olun</h3>
+                            <span class="d-block">istifadəçi adı</span>
+                            <input type="email" class="box d-block" placeholder="email daxil edin" id="">
+                            <span>şifrə</span>
+                            <input type="password" class="box d-block" placeholder="şifrənizi daxil edin" id="">
+                            <div class="checkbox">
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">məni xatırla</label>
+                            </div>
+                            <input type="submit" value="Daxil ol" class="login-btn">
+                            <p>Şifrəni unutmusan ? <a href="#">Bura basın</a></p>
+                            <p>hesabınız yoxdur ? <a href="#">Bura basın</a></p>
+                        </form>
+                    </div>
+                    <div class="register-form-container">
+                        <div id="close-register-btn" class="fas fa-times"></div>
+                        <form action="#">
+                            <h3>Qeydiyyat</h3>
+                            <span class="d-block">İstifadəçi adı</span>
+                            <input type="email" class="box d-block" placeholder="email daxil edin" id="">
+                            <span>Şifrə</span>
+                            <input type="password" class="box d-block" placeholder="şifrənizi daxil edin" id="">
+                            <span>Şifrə Təkrar</span>
+                            <input type="password" class="box d-block" placeholder="yenidən daxil edin " id="">
+                            <input type="submit" value="Qeydiyyat" class="login-btn">
+                        </form>
+                    </div>
+                    <div class="password-form-container">
+                        <div id="close-password-btn" class="fas fa-times"></div>
+                        <form action="#">
+                            <h3>şifrəni qaytar</h3>
+                            <span class="d-block">istifadəçi adı</span>
+                            <input type="email" class="box d-block" placeholder="email daxil edin" id="">
+                            <input type="submit" value="Göndər" class="login-btn">
+                        </form>
+                    </div>
+                    <div class="menu-bars-container">
+                        <div id="close-menu-btn" class="fas fa-times"></div>
+                        <nav class="toggle-menu">
+                            <ul class="toggle-menu-container">
+                                <li class="toggle-menu-items">
+                                    <a href="" class="toggle-menu-item text-decoration-none">
+                                        <span class="toggle-menu-link text-dark text-capitalize fs-1 fw-400">
+                                            yeni gələnlər
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="toggle-menu-items">
+                                    <a href="" class="toggle-menu-item text-decoration-none">
+                                        <span class="toggle-menu-link text-dark fs-1 fw-400 text-capitalize">
+                                            çox oxunanlar
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="toggle-menu-items">
+                                    <a href="" class="toggle-menu-item text-decoration-none">
+                                        <span class="toggle-menu-link text-dark fs-1 fw-400 text-capitalize">
+                                            bədii kitablar
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="toggle-menu-items">
+                                    <a href="" class="toggle-menu-item text-decoration-none">
+                                        <span class="toggle-menu-link text-dark fs-1 fw-400 text-capitalize">
+                                            nağıl kitabları
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="toggle-menu-items">
+                                    <a href="" class="toggle-menu-item text-decoration-none">
+                                        <span class="toggle-menu-link text-dark fs-1 fw-400 text-capitalize">
+                                            tanınmış müəlliflər
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class="navbar-nav bg-success">
+            <div class="navbar-items d-flex justify-content-center align-items-center">
+                <a href="#" class="nav-item nav-link-style px-4 text-decoration-none fs-4 text-capitalize">
+                    <span class="nav-link text-white">yeni gələnlər</span>
+                </a>
+                <a href="#" class="nav-item nav-link-style px-4 text-decoration-none fs-4 text-capitalize">
+                    <span class="nav-link text-white">çox oxunanlar</span>
+                </a>
+                <a href="#" class="nav-item nav-link-style px-4 text-decoration-none fs-4 text-capitalize">
+                    <span class="nav-link text-white">bədii kitablar</span>
+                </a>
+                <a href="#" class="nav-item nav-link-style px-4 text-decoration-none fs-4 text-capitalize">
+                    <span class="nav-link text-white">nağıl kitabları</span>
+                </a>
+                <a href="#" class="nav-item nav-link-style px-4 text-decoration-none fs-4 text-capitalize">
+                    <span class="nav-link text-white">tanınmış müəlliflər</span>
+                </a>
+            </div>
+        </div>
+        <div class="bottom-navbar d-flex justify-content-center align-items-center">
+            <a href="#" class="bottom-navbar-nav fas fa-home" title="home"></a>
+            <a href="#" class="bottom-navbar-nav fas fa-heart" title="heart"></a>
+            <a href="#" class="bottom-navbar-nav fas fa-list" title="list"></a>
+            <a href="#" class="bottom-navbar-nav fas fa-tags" title="tags"></a>
+        </div>
+
+    </div>
+
+    @RenderBody()
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__nav">
+                    <div class="footer__nav-top">
+                        <ul class="footer__nav-list">
+                            <h3 class="footer__nav-title">Şirkət</h3>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Haqqımızda</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Karyera</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Bloq</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">"Əlaqə"</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__nav-list">
+                            <h3 class="footer__nav-title">Siyasət</h3>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Məxfilik Siyasətləri</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">İstifadə Qaydaları</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Təhlükəsiz alış-veriş</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Müəllif Hüquqları</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__nav-list">
+                            <h3 class="footer__nav-title">Kömək</h3>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Ödəniş</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Çatdırılma</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Geri-qaytarma</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">FAQ</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__nav-list">
+                            <h3 class="footer__nav-title">Digər</h3>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">Tərəfdaş</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Saytın xəritəsi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-bottom">
+                        <a href="#" class="footer__nav-social"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer__nav-social"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer__nav-social"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="footer__nav-social"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#" class="footer__nav-social"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="footer__nav-social"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer__request">
+                    <h3 class="footer__nav-title">KİTAB TƏLƏB EDİN</h3>
+                    <p class="footer__nav-text">
+                        Kitab tələb etmək üçün aşağıdakı formanı doldurun. Kitab əlçatan olan
+                        kimi sizə məlumat verəcəyik.
+                    </p>
+                    <form action="submit" class="footer__request-form">
+                        <div class="footer__request-left">
+                            <label for="" class="footer__request-label">
+                                <span>ISBN13: *</span>
+                                <input type="text" class="footer__request-input">
+                            </label>
+                            <label for="" class="footer__request-label">
+                                Müəllif:
+                                <input type="text" class="footer__request-input">
+                            </label>
+                            <label for="" class="footer__request-label">
+                                Email Id: *
+                                <input type="email" class="footer__request-input">
+                            </label>
+                        </div>
+                        <div class="footer__request-right">
+                            <label for="" class="footer__request-label">
+                                Kitab adı: *
+                                <input type="text" class="footer__request-input">
+                            </label>
+                            <label for="" class="footer__request-label">
+                                Ədəd:
+                                <input type="number" class="footer__request-input">
+                            </label>
+                            <label for="" class="footer__request-label">
+                                Telefon:
+                                <input type="tel" class="footer__request-input">
+                            </label>
+                        </div>
+                    </form>
+                    <div class="footer__submit">
+                        <button class="footer__submit-btn" type="submit">Təsdiqlə</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>Müəllif hüququ © 2022 . Libro.az. Bütün hüquqlar qorunur</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="/site/js/libro.js"></script>
+    @RenderSection("addJs", required: false)
+</body>
+
+</html>
